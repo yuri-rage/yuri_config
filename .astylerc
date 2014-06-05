@@ -9,7 +9,6 @@ indent-namespaces
 max-instatement-indent=40
 indent-preprocessor
 convert-tabs
-brackets=linux
 pad-header
 pad-oper
 unpad-paren
