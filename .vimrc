@@ -18,7 +18,15 @@ set directory=~/.vim/tmp,/tmp,.
 set backupdir=~/.vim/tmp,/tmp,.
 
 " use gggqG for autoformat of c-like code
+" requires astyle
 autocmd FileType h,c,cpp,java,ino,pde set formatprg=astyle
+
+" use gggqG for autoformat of xml
+" requires xmllint
+autocmd FileType xml set formatprg=xmllint\ --encode\ UTF-8\ --format\ %
+
+" force *.md files to be opened as markdown filetypes
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " vim-instant-markdown previewer
 " from https://github.com/suan/vim-instant-markdown
