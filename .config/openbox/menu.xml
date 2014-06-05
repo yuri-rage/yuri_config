@@ -145,6 +145,16 @@
 				</startupnotify>
 			</action>
 		</item>
+		<item label="Screenshot (desktop)">
+			<action name="Execute">
+				<execute>scrot -d 1 -e 'feh $f'</execute>
+			</action>
+		</item>
+		<item label="Screenshot (select)">
+			<action name="Execute">
+				<execute>scrot -s -b -e 'feh $f'</execute>
+			</action>
+		</item>
 	</menu>
 	<menu id="system-menu" label="System">
 		<item label="Openbox Configuration Manager">

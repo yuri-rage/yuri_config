@@ -56,6 +56,7 @@ Output of `pacman -Qe >> README.md` :<br>
     faenza-icon-theme 1.3.1-2
     fakeroot 1.20-1
     fdupes 1.51-2
+    feh 2.12-1
     file 5.18-1
     filesystem 2014.05-2
     findutils 4.4.2-5
@@ -74,7 +75,7 @@ Output of `pacman -Qe >> README.md` :<br>
     gstreamer0.10-bad-plugins 0.10.23-8
     gstreamer0.10-good-plugins 0.10.31-6
     gstreamer0.10-ugly-plugins 0.10.19-11
-    gvim 7.4.307-3
+    gvim 7.4.307-4
     gzip 1.6-1
     hsetroot 1.0.2-2
     inetutils 1.9.2-1
@@ -115,16 +116,17 @@ Output of `pacman -Qe >> README.md` :<br>
     patch 2.7.1-2
     pciutils 3.2.1-1
     pcmciautils 018-7
-    perl 5.18.2-2
+    perl 5.20.0-2
     pkg-config 0.28-1
     procps-ng 3.3.9-3
     psmisc 22.21-2
     python-gobject 3.12.2-1
     python2-xlib 0.15rc1-7
     reiserfsprogs 3.6.24-1
-    rxvt-unicode 9.20-1
+    rxvt-unicode 9.20-2
     s-nail 14.6.4-1
     screen 4.2.1-2
+    scrot 0.8-6
     sed 4.2.2-3
     shadow 4.2.1-1
     sudo 1.8.10.p3-1
@@ -166,5 +168,4 @@ Output of `pacman -Qe >> README.md` :<br>
     xorg-xinit 1.3.3-3
     xsel 1.2.0-5
     xterm 304-1
-    youtube-dl 2014.06.02-1
-
+    youtube-dl 2014.06.04-1
