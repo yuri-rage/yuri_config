@@ -1,0 +1,15 @@
+# ROOT code formatting style
+style=stroustrup
+mode=c
+align-pointer=name
+indent=spaces=2
+indent-switches
+indent-cases
+indent-namespaces
+max-instatement-indent=40
+indent-preprocessor
+convert-tabs
+brackets=linux
+pad-header
+pad-oper
+unpad-paren
