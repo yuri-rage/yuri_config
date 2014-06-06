@@ -62,6 +62,7 @@ if [[ $REPLY =~ ^[Nn]$ ]]; then
 fi
 
 # git push
+echo
 git push origin master
 if [[ $? -ne 0 ]] ; then
   echo -e "\nError - exiting, no files pushed."
