@@ -45,18 +45,26 @@ if [[ $REPLY =~ ^[Nn]$ ]]; then
 fi
 
 # git add/commit
-echo -e "\nStaging tracked files to current commit."
 git add -u
 git commit -m "`date +"scripted update: %a, %d %b %Y  %H:%M:%S"`"
+if [[ $? -ne 0 ]] ; then
+  echo -e "\n\nError - exiting, files not staged."
+  exit 1
+fi
+echo -e "\nFiles staged for upload."
 
 # ask whether to push files to git
 # default = yes
-read -n 1 -r -p 'Push files to GitHub? [Y/n] '
+read -n 1 -r -p 'Push files to current git branch? [Y/n] '
 if [[ $REPLY =~ ^[Nn]$ ]]; then
   echo -e "\nExiting - no files pushed."
   exit 0
 fi
 
 # git push
-echo -e "\nPushing staged files to GitHub."
 git push origin master
+if [[ $? -ne 0 ]] ; then
+  echo -e "\n\nError - exiting, no files pushed."
+  exit 1
+fi
+echo -e "\n\nSuccess! Files pushed to current git branch."
