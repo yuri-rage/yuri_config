@@ -51,7 +51,7 @@ if [[ $? -ne 0 ]] ; then
   echo -e "\n\nError - exiting, files not staged."
   exit 1
 fi
-echo -e "\nFiles staged for upload."
+echo -e "\nFiles staged for upload.\n"
 
 # ask whether to push files to git
 # default = yes
