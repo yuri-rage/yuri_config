@@ -62,7 +62,7 @@ if [[ $REPLY =~ ^[Nn]$ ]]; then
 fi
 
 # git add/commit
-git add $INCLUDE_FILES_PATH
+git add $ADDL_FILES_PATH
 git add -u
 git commit -m "`date +"scripted update: %a, %d %b %Y  %H:%M:%S"`"
 if [[ $? -ne 0 ]] ; then
