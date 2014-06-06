@@ -326,7 +326,9 @@ S: shade (roll up/down)
   <!-- yuri - additional keybindings -->
   <keybind key="A-F2">
   <action name="Execute">
-  <command>gmrun</command>
+  <!-- yuri - use urxvt instead of gmrun...maybe
+  <command>gmrun</command> -->
+  <command>urxvt -geometry 60x10+450+0 -name 'bashrun' -e sh -c "/bin/bash -i -t"</command>
   </action>
   </keybind>
   <!-- yuri - aero snap style tiling using keypad numbers 1-9 -->
@@ -899,6 +901,12 @@ S: shade (roll up/down)
   </position>
   <focus>no</focus>
   <desktop>all</desktop>
+  </application>
+  <application name="bashrun">
+  <decor>no</decor>
+  <skip_taskbar>yes</skip_taskbar>
+  <skip_pager>yes</skip_pager>
+  <focus>yes</focus>
   </application>
   </applications>
 </openbox_config>

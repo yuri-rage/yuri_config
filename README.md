@@ -23,7 +23,7 @@ Feel free to copy/clone them for your own use.  I make no promises that they'll 
 
 ---------------------------------------------
 <!--- cut_here --->
-System info current as of: Fri, 06 Jun 2014  18:15:36
+System info current as of: Fri, 06 Jun 2014  21:08:00
 
 Output of `uname -a >> README.md` :
 
@@ -105,6 +105,7 @@ Output of `pacman -Qe >> README.md` :<br>
     mdadm 3.3-2
     mediterraneannight-theme-git 2.03.0.1.r9.g2c41b16-1
     mesa 10.1.4-1
+    mlocate 0.26-3
     mp3gain 1.5.2-3
     nano 2.2.6-2
     network-manager-applet 0.9.8.10-1
@@ -128,7 +129,7 @@ Output of `pacman -Qe >> README.md` :<br>
     python-gobject 3.12.2-1
     python2-xlib 0.15rc1-7
     reiserfsprogs 3.6.24-1
-    rxvt-unicode 9.20-2
+    rxvt-unicode-pixbuf 9.20-1
     s-nail 14.6.4-1
     screen 4.2.1-2
     scrot 0.8-6
@@ -148,6 +149,8 @@ Output of `pacman -Qe >> README.md` :<br>
     ttf-microsoft-consolas 5.33-1
     ttf-ms-fonts 2.0-10
     udiskie 0.8.0-2
+    urxvt-perls 2.1-1
+    urxvt-vtwheel 0.3-1
     usbutils 007-1
     util-linux 2.24.2-1
     vi 1:050325-3

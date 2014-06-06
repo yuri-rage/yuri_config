@@ -2,28 +2,9 @@
 <!-- yuri - streamlined/stripped down from default -->
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 	<menu id="apps-accessories-menu" label="Accessories">
-		<item label="Calculator">
+		<item label="File Search">
 			<action name="Execute">
-				<command>gnome-calculator</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Character Map">
-			<action name="Execute">
-				<command>gnome-character-map</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Ark File Archiver">
-			<action name="Execute">
-				<command>ark</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
+				<execute>catfish --fileman=thunar --path=/home/yuri </execute>
 			</action>
 		</item>
 	</menu>

@@ -1,55 +1,59 @@
 ! yuri - font settings
-Xft.dpi:	96
-Xft.antialias:	true
-Xft.rgba:	rgb
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
 Xft.hinting:	true
-Xft.hintstyle:	hintslight
+Xft.hintstyle:  hintslight
 
 ! yuri - basic window and shell settings
-URxvt.depth:		32
-URxvt*geometry:		110x30+100+100
-URxvtDesktop*geometry:  110x30+0+0
-URxvt.transparent:	false
-URxvtDesktop.transparent: true
-URxvt.fading:		0
-URxvt.loginShell:	true
-URxvt.saveLines:	200
-URxvt.internalBorder:	0
-URxvt.lineSpace:	0
-URxvt.cursorUnderline:	1
-URxvt.cursorBlink:	1
+URxvt.depth:            32
+URxvt*geometry:         110x30+100+100
+URxvtDesktop*geometry:  110x30+5+5
+! true transparency supported - see .background properties
+!URxvt.transparent:	false
+!URxvtDesktop.transparent: true
+URxvt.loginShell:       true
+URxvt.saveLines:        4096
+URxvt.internalBorder:   0
+URxvt.lineSpace:        0
+URxvt.cursorUnderline:  1
+URxvt.cursorBlink:      1
+URxvt.iconFile:         /usr/share/icons/Faenza/apps/48/utilities-terminal.png
 
 ! yuri - font selection
-URxvt.allow_bold:	true
-URxvt*font:	    	xft:Consolas:pixelsize=11
-URxvt*boldFont:		xft:Consolas:bold:pixelsize=11
-URxvt*letterSpace:	-1
+URxvt.allow_bold:   true
+URxvt*font:         xft:Consolas:pixelsize=11
+URxvt*boldFont:     xft:Consolas:bold:pixelsize=11
+URxvt*letterSpace:  -1
 
 ! yuri - scroll settings
-URxvt.scrollStyle:	rxvt
-URxvt.scrollBar:	false
+URxvt.scrollStyle:  rxvt
+URxvt.scrollBar:    false
 
-! yuri - clipboard plugin and bindings
-URxvt.iso14755: False
-URxvt.perl-ext-common:	default,clipboard
+! yuri - clipboard, clickable url, and mouse wheel extensions
+URxvt.iso14755:         False
+URxvt.perl-ext-common:  default,clipboard,matcher,vtwheel
+! clipboard bindings
 URxvt.keysym.Control-Shift-C:   perl:clipboard:copy
 URxvt.keysym.Control-Shift-V:   perl:clipboard:paste
 !URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-!URxvt.matcher.button:	1
-!URxvt.urlLauncher:	firefox
-
-
-URxvt.pointerBlank:	true
+! clickable links
+URxvt.url-launcher:   /usr/bin/chromium
+URxvt.matcher.button: 1
 
 !! solarized colors !!
 
-*background:			#002b36
-*foreground:			#839496
-!fading:			40
-*fadeColor:			#002b36
-*cursorColor:			#93a1a1
-*pointerColorBackground:	#586e75
-*pointerColorForeGround:	#93a1a1
+URxvt*background:         [85]#002b36
+URxvtDesktop*background:  [0]#002b36
+*foreground:              #839496
+URxvtDesktop*fading:      0
+URxvt*fading:             40
+URxvt*fadeColor:          #002b36
+*cursorColor:             #93a1a1
+*pointerColorBackground:  #586e75
+*pointerColorForeGround:  #93a1a1
+*pointerBlank:            true
+
 
 ! black
 *color0:	#073642
