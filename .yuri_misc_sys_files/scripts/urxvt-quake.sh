@@ -8,7 +8,7 @@ WINID=`wmctrl -lx | grep urxvt-quake.URxvt | awk '{ print $1 }'`
 
 # if no existing window, start the terminal
 if [ -z "$WINID" ]; then
-  urxvt -geometry 80x20 -name urxvt-quake &
+  urxvt -geometry 110x20 -name urxvt-quake &
 else # toggle hidden
   wmctrl -i -r $WINID -b toggle,hidden
   # if window is visible, activate it

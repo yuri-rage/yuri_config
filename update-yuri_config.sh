@@ -9,15 +9,18 @@ TMP_FILE='/tmp/update-yuri_config.md'
 OUTPUT_FILE='/home/yuri/README.md'
 BACKUP_FILE="$INPUT_FILE.old"
 
+# files not in my home directory are listed in $ADDL_FILES_LIST
+# this script will copy them to $ADDL_FILES_PATH
+# files matching *.sh will be copied to $ADDL_FILES_PATH/scripts
 ADDL_FILES_LIST='/home/yuri/.yuri_misc_sys_files/FILES.txt'
 ADDL_FILES_PATH='/home/yuri/.yuri_misc_sys_files'
 
 # back up the previous file
-echo "Backing up $INPUT_FILE as $BACKUP_FILE"
+echo -e "Backing up $INPUT_FILE as $BACKUP_FILE\n"
 cp $INPUT_FILE $BACKUP_FILE
 
 # remove previous system info/output
-echo "Removing previous system info"
+echo -e "Creating temporary $TMP_FILE\n"
 sed '/cut_here/q' $INPUT_FILE > $TMP_FILE
 
 # append date/time stamp
@@ -48,7 +51,7 @@ if [ ! -d "$ADDL_FILES_PATH"/scripts ]; then
 fi
 while IFS= read -r f; do
   if [ ${f: -3} == ".sh" ]; then
-  cp $f "$ADDL_FILES_PATH"/scripts
+    cp $f "$ADDL_FILES_PATH"/scripts
   else
     cp $f $ADDL_FILES_PATH
   fi
