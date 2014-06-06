@@ -22,6 +22,9 @@ Feel free to copy/clone them for your own use.  I make no promises that they'll 
     0. You just DO WHAT THE FUCK YOU WANT TO.
 
 ---------------------------------------------
+<!--- cut_here --->
+System info current as of: Fri, 06 Jun 2014  17:55:32
+
 Output of `uname -a >> README.md` :
 
     Linux vorlauf-arch 3.14.5-1-ARCH #1 SMP PREEMPT Sun Jun 1 07:36:23 CEST 2014 x86_64 GNU/Linux
@@ -40,6 +43,7 @@ Output of `pacman -Qe >> README.md` :<br>
     binutils 2.24-4
     bison 3.0.2-1
     bzip2 1.0.6-5
+    catfish 1.0.2-1
     chromium 35.0.1916.114-1
     chromium-libpdf 1:35.0.1916.114-1
     chromium-pepper-flash 13.0.0.214-2
@@ -107,6 +111,7 @@ Output of `pacman -Qe >> README.md` :<br>
     networkmanager 0.9.8.10-1
     nodejs 0.10.28-3
     obconf 2.0.4-1
+    oblogout 0.2-15
     obmenu 1.0-9
     openbox 3.5.2-6
     openbox-themes 1.0.2-2

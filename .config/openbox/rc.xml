@@ -363,20 +363,20 @@ S: shade (roll up/down)
   <x>0</x>
   <y>0</y>
   <width>50%</width>
-  <height>100%</height>
   </action>
+  <action name="ToggleMaximizeVert"/>
   </keybind>
   <keybind key="C-A-KP_5">
   <action name="ToggleMaximizeFull"/>
   </keybind>
   <keybind key="C-A-KP_6">
-  <action name="UnmaximizeFull"/>
+    <action name="UnmaximizeFull"/>
   <action name="MoveResizeTo">
   <x>50%</x>
   <y>0</y>
   <width>50%</width>
-  <height>100%</height>
   </action>
+  <action name="ToggleMaximizeVert"/>
   </keybind>
   <keybind key="C-A-KP_7">
   <action name="UnmaximizeFull"/>
@@ -604,8 +604,6 @@ S: shade (roll up/down)
   <action name="Raise"/>
   </else>
   </action>
-  <!--action name="Focus" />
-  <action name="Raise" /-->
   </mousebind>
   </context>
   <context name="Icon">

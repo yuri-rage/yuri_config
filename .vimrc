@@ -33,4 +33,5 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " requires ruby rubygems nodejs xdg-utils
 " gems: pygments.rb redcarpet
 " also, from npm (nodejs) - instant-markdown-d
+let g:instant_markdown_slow = 1
 filetype plugin on

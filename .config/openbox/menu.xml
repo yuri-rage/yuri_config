@@ -218,9 +218,9 @@
 		<menu id="apps-fileman-menu"/>
 		<separator/>
 		<menu id="system-menu"/>
-		<item label="Log Out">
-			<action name="Exit">
-				<prompt>yes</prompt>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>oblogout</execute>
 			</action>
 		</item>
 	</menu>
