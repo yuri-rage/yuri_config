@@ -48,7 +48,7 @@ fi
 git add -u
 git commit -m "`date +"scripted update: %a, %d %b %Y  %H:%M:%S"`"
 if [[ $? -ne 0 ]] ; then
-  echo -e "\n\nError - exiting, files not staged."
+  echo -e "\nError - exiting, files not staged."
   exit 1
 fi
 echo -e "\nFiles staged for upload.\n"
@@ -64,7 +64,7 @@ fi
 # git push
 git push origin master
 if [[ $? -ne 0 ]] ; then
-  echo -e "\n\nError - exiting, no files pushed."
+  echo -e "\nError - exiting, no files pushed."
   exit 1
 fi
-echo -e "\n\nSuccess! Files pushed to current git branch."
+echo -e "\n\nSuccess! Files pushed to current git branch.\n"
