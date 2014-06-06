@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # toggles a tilda/guake/yakuake-like urxvt window
-# requires wmctrl, openbox, and custom .config/rc.xml application settings
+# requires wmctrl, openbox, and custom .config/openbox/rc.xml settings
 
 # grab the window ID of the bashrun terminal window
 WINID=`wmctrl -lx | grep bashrun.URxvt | awk '{ print $1 }'`
