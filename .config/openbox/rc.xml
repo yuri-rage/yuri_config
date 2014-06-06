@@ -328,7 +328,12 @@ S: shade (roll up/down)
   <action name="Execute">
   <!-- yuri - use urxvt instead of gmrun...maybe
   <command>gmrun</command> -->
-  <command>urxvt -geometry 60x10+450+0 -name 'bashrun' -e sh -c "/bin/bash -i -t"</command>
+  <command>/home/yuri/.scripts/bashrun.sh</command>
+  </action>
+  </keybind>
+  <keybind key="F12">
+  <action name="Execute">
+  <command>/home/yuri/.scripts/bashrun.sh</command>
   </action>
   </keybind>
   <!-- yuri - aero snap style tiling using keypad numbers 1-9 -->
@@ -410,17 +415,17 @@ S: shade (roll up/down)
   <!-- yuri - volume keybindings -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>/usr/local/bin/volume_change.sh up</command>
+        <command>/home/yuri/.scripts/volume_change.sh up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>/usr/local/bin/volume_change.sh down</command>
+        <command>/home/yuri/.scripts/volume_change.sh down</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>/usr/local/bin/volume_change.sh toggle</command>
+        <command>/home/yuri/.scripts/volume_change.sh toggle</command>
       </action>
     </keybind>
   </keyboard>
@@ -895,18 +900,21 @@ S: shade (roll up/down)
   <skip_taskbar>yes</skip_taskbar>
   <skip_pager>yes</skip_pager>
   <layer>below</layer>
-  <position>
-  <x>center</x>
-  <y>0</y>
-  </position>
   <focus>no</focus>
   <desktop>all</desktop>
   </application>
   <application name="bashrun">
-  <decor>no</decor>
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>0</y>
+    </position>
+  <animateIconify>no</animateIconify>
   <skip_taskbar>yes</skip_taskbar>
   <skip_pager>yes</skip_pager>
+  <layer>above</layer>
   <focus>yes</focus>
+  <desktop>all</desktop>
   </application>
   </applications>
 </openbox_config>

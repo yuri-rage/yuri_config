@@ -23,7 +23,7 @@ Feel free to copy/clone them for your own use.  I make no promises that they'll 
 
 ---------------------------------------------
 <!--- cut_here --->
-System info current as of: Fri, 06 Jun 2014  21:08:00
+System info current as of: Fri, 06 Jun 2014  22:59:05
 
 Output of `uname -a >> README.md` :
 
