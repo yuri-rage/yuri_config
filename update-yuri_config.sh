@@ -5,7 +5,7 @@
 # stages all tracked files for upload to the git repo
 
 INPUT_FILE='/home/yuri/README.md'
-TMP_FILE='/tmp/update-yuri_config.md'
+TMP_FILE=`mktemp -u "yuri_config-XXXXXX.md"`
 OUTPUT_FILE='/home/yuri/README.md'
 BACKUP_FILE="$INPUT_FILE.old"
 
