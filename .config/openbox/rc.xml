@@ -328,12 +328,12 @@ S: shade (roll up/down)
   <action name="Execute">
   <!-- yuri - use urxvt instead of gmrun...maybe
   <command>gmrun</command> -->
-  <command>/home/yuri/.scripts/bashrun.sh</command>
+  <command>/usr/local/bin/bashrun.sh</command>
   </action>
   </keybind>
   <keybind key="F12">
   <action name="Execute">
-  <command>/home/yuri/.scripts/bashrun.sh</command>
+  <command>/usr/local/bin/bashrun.sh</command>
   </action>
   </keybind>
   <!-- yuri - aero snap style tiling using keypad numbers 1-9 -->
@@ -415,17 +415,17 @@ S: shade (roll up/down)
   <!-- yuri - volume keybindings -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>/home/yuri/.scripts/volume_change.sh up</command>
+        <command>/usr/local/bin/volume_change.sh up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>/home/yuri/.scripts/volume_change.sh down</command>
+        <command>/usr/local/bin/volume_change.sh down</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>/home/yuri/.scripts/volume_change.sh toggle</command>
+        <command>/usr/local/bin/volume_change.sh toggle</command>
       </action>
     </keybind>
   </keyboard>

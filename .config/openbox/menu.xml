@@ -163,12 +163,12 @@
 		<!-- yuri - added commands to restart desktop apps -->
 		<item label="Restart Compositor">
 			<action name="Execute">
-				<command>/home/yuri/.scripts/comptonrestart.sh</command>
+				<command>/usr/local/bin/comptonrestart.sh</command>
 			</action>
 		</item>
 		<item label="Restart tint2">
 			<action name="Execute">
-				<command>/home/yuri/.scripts/tint2restart.sh</command>
+				<command>/usr/local/bin/tint2restart.sh</command>
 			</action>
 		</item>
 		<item label="Reload wallpaper">
