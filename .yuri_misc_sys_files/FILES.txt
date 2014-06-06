@@ -2,9 +2,4 @@
 /etc/lightdm/lightdm-gtk-greeter.conf
 /etc/bash.bashrc
 /var/lib/AccountsService/users/yuri
-/usr/local/bin/mirror_displays.sh
-/usr/local/bin/bashrun.sh
-/usr/local/bin/comptonrestart.sh
-/usr/local/bin/rip-yt
-/usr/local/bin/tint2restart.sh
-/usr/local/bin/volume_change.sh
+/usr/local/bin/*.sh

@@ -328,12 +328,12 @@ S: shade (roll up/down)
   <action name="Execute">
   <!-- yuri - use urxvt instead of gmrun...maybe
   <command>gmrun</command> -->
-  <command>/usr/local/bin/bashrun.sh</command>
+  <command>/usr/local/bin/urxvt-quake.sh</command>
   </action>
   </keybind>
   <keybind key="F12">
   <action name="Execute">
-  <command>/usr/local/bin/bashrun.sh</command>
+  <command>/usr/local/bin/urxvt-quake.sh</command>
   </action>
   </keybind>
   <!-- yuri - aero snap style tiling using keypad numbers 1-9 -->
@@ -903,7 +903,7 @@ S: shade (roll up/down)
   <focus>no</focus>
   <desktop>all</desktop>
   </application>
-  <application name="bashrun">
+  <application name="urxvt-quake">
     <decor>no</decor>
     <position force="yes">
       <x>center</x>

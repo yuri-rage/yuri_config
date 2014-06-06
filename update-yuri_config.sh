@@ -43,8 +43,15 @@ echo -e "\nFile updated: $OUTPUT_FILE\n"
 # update files to include in the git repository
 # (files that are external to my home directory)
 echo -e "Copying selected system files to $ADDL_FILES_PATH\n"
+if [ ! -d "$ADDL_FILES_PATH"/scripts ]; then
+  mkdir "$ADDL_FILES_PATH"/scripts
+fi
 while IFS= read -r f; do
-  cp $f $ADDL_FILES_PATH
+  if [ ${f: -3} == ".sh" ]; then
+  cp $f "$ADDL_FILES_PATH"/scripts
+  else
+    cp $f $ADDL_FILES_PATH
+  fi
   if [[ $? -ne 0 ]] ; then
     echo "Error: did not copy $f"
   else
