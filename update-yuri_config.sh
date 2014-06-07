@@ -48,6 +48,7 @@ echo -e "\nFile updated: $OUTPUT_FILE\n"
 echo -e "Copying selected system files to $ADDL_FILES_PATH\n"
 [ ! -d "$ADDL_FILES_PATH"/scripts ] && mkdir "$ADDL_FILES_PATH"/scripts
 while IFS= read -r f; do
+  # copy files, scripts go to their own sub-directory
   [ ${f: -3} == ".sh" ] && cp $f "$ADDL_FILES_PATH"/scripts || cp $f $ADDL_FILES_PATH
   [ $? -ne 0 ] && echo "Error: did not copy $f" || echo "Success: copied $f"
 done < $ADDL_FILES_LIST
