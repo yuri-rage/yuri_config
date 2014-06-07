@@ -1,0 +1,190 @@
+! Xft font settings - used by urxvt
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:	true
+Xft.hintstyle:  hintslight
+
+! yuri - all urxvt X resources are listed below, in the order output by
+!        urxvt --help 2>&1| sed -n '/:  /s/^ */! URxvt*/gp'
+!
+!        use xrdb .Xresources to reload this file
+
+! URxvt*termName:                       string
+URxvt*geometry:                         110x30+100+100
+URxvtDesktop*geometry:                  110x30+5+5
+URxvtQuake*geometry:                    110x20
+! URxvt*chdir:                          string
+! URxvt*reverseVideo:                   boolean
+URxvt*loginShell:                       true
+! URxvt*jumpScroll:                     boolean
+! URxvt*skipScroll:                     boolean
+! URxvt*pastableTabs:                   boolean
+! URxvt*scrollstyle:                    mode
+URxvt*scrollBar:                        false
+! URxvt*scrollBar_right:                boolean
+! URxvt*scrollBar_floating:             boolean
+! URxvt*scrollBar_align:                mode
+! URxvt*thickness:                      number
+! URxvt*scrollTtyOutput:                boolean
+! URxvt*scrollTtyKeypress:              boolean
+! URxvt*scrollWithBuffer:               boolean
+! URxvt*inheritPixmap:                  boolean
+! URxvt*transparent:                    false
+! URxvt*tintColor:                      color
+! URxvt*shading:                        number
+! URxvt*blurRadius:                     HxV
+URxvtDesktop*fading:                    0
+URxvt*fading:                           40
+URxvt*fadeColor:                        #002b36
+! URxvt*utmpInhibit:                    boolean
+! URxvt*urgentOnBell:                   boolean
+! URxvt*visualBell:                     boolean
+! URxvt*mapAlert:                       boolean
+! URxvt*meta8:                          boolean
+! URxvt*mouseWheelScrollPage:           boolean
+! URxvt*tripleclickwords:               boolean
+! URxvt*insecure:                       boolean
+URxvt*cursorUnderline:                  true
+URxvt*cursorBlink:                      true
+URxvt*pointerBlank:                     false
+! yuri - solarized colors for both urxvt and xterm
+!      - true transparency supported by urxvt
+!      - use [alpha]#rrggbb format
+URxvt*background:                       [85]#002b36
+URxvtDesktop*background:                [0]#002b36
+XTerm*background:                       #002b36
+XTerm*foreground:                       #839496
+URxvt*foreground:                       #839496
+! dark grey
+XTerm*color0:                           #073642
+URxvt*color0:                           #073642
+! dark red
+XTerm*color1:                           #dc322f
+URxvt*color1:                           #dc322f
+! dark green
+XTerm*color2:                           #586e75
+URxvt*color2:                           #586e75
+! dark yellow
+XTerm*color3:                           #b58900
+URxvt*color3:                           #b58900
+! dark blue
+XTerm*color4:                           #268bd2
+URxvt*color4:                           #268bd2
+! dark magenta
+XTerm*color5:                           #d33682
+URxvt*color5:                           #d33682
+! dark cyan
+XTerm*color6:                           #2aa198
+URxvt*color6:                           #2aa198
+! light grey
+XTerm*color7:                           #eee8d5
+URxvt*color7:                           #eee8d5
+! black
+XTerm*color8:                           #002b36
+URxvt*color8:                           #002b36
+! red
+XTerm*color9:                           #cb4b16
+URxvt*color9:                           #cb4b16
+! green
+XTerm*color10:                          #859900
+URxvt*color10:                          #859900
+! yellow
+XTerm*color11:                          #657b83
+URxvt*color11:                          #657b83
+! blue
+XTerm*color12:                          #839496
+URxvt*color12:                          #839496
+! magenta
+XTerm*color13:                          #6c71c4
+URxvt*color13:                          #6c71c4
+! cyan
+XTerm*color14:                          #93a1a1
+URxvt*color14:                          #93a1a1
+! white
+XTerm*color15:                          #fdf6e3
+URxvt*color15:                          #fdf6e3
+! URxvt*colorBD:                        color
+! URxvt*colorIT:                        color
+URxvt*colorUL:                          #268bd2
+! URxvt*colorRV:                        color
+! URxvt*underlineColor:                 color
+! URxvt*scrollColor:                    color
+! URxvt*troughColor:                    color
+! URxvt*highlightColor:                 color
+! URxvt*highlightTextColor:             color
+XTerm*cursorColor:                      #93a1a1
+URxvt*cursorColor:                      #93a1a1
+! URxvt*cursorColor2:                   color
+! URxvt*pointerColor:                   color
+! URxvt*pointerColor2:                  color
+! URxvt*borderColor:                    color
+! URxvt*path:                           search path
+! yuri - backgroundPixmap and iconFile require installation from AUR
+!      - packer -S rxvt-unicode-pixbuf
+! URxvt*backgroundPixmap:               file[;geom]
+URxvt*iconFile:                         /usr/share/icons/Faenza/apps/48/utilities-terminal.png
+URxvt*font:                             xft:Consolas:pixelsize=11
+URxvt*boldFont:                         xft:Consolas:bold:pixelsize=11
+! URxvt*italicFont:                     fontname
+! URxvt*boldItalicFont:                 fontname
+! URxvt*intensityStyles:                boolean
+! URxvt*inputMethod:                    name
+! URxvt*preeditType:                    style
+! URxvt*imLocale:                       string
+! URxvt*imFont:                         fontname
+! URxvt*title:                          string
+! URxvt*iconName:                       string
+URxvt*saveLines:                        4096
+! URxvt*buffered:                       boolean
+URxvt*depth:                            32
+! URxvt*visual:                         number
+! URxvt*transient-for:                  windowid
+! URxvt*override-redirect:              boolean
+! URxvt*hold:                           boolean
+! URxvt*externalBorder:                 number
+URxvt*internalBorder:                   0
+! URxvt*borderLess:                     boolean
+URxvt*lineSpace:                        0
+URxvt*letterSpace:                      -1
+! URxvt*skipBuiltinGlyphs:              boolean
+! URxvt*pointerBlankDelay:              number
+! URxvt*backspacekey:                   string
+! URxvt*deletekey:                      string
+! URxvt*print-pipe:                     string
+! URxvt*modifier:                       modifier
+! URxvt*cutchars:                       string
+! URxvt*answerbackString:               string
+! URxvt*secondaryScreen:                boolean
+! URxvt*secondaryScroll:                boolean
+! URxvt*perl-lib:                       string
+! URxvt*perl-eval:                      perl-eval
+URxvt*perl-ext-common:                  default,clipboard,matcher,vtwheel
+! URxvt*perl-ext:                       string
+URxvt*iso14755:                         false
+! URxvt*iso14755_52:                    boolean
+! URxvt*xrm:                            string
+! URxvt*keysym.sym:                     keysym
+URxvt.keysym.Control-Shift-C:           perl:clipboard:copy
+URxvt.keysym.Control-Shift-V:           perl:clipboard:paste
+! URxvt*background.border:              boolean
+! URxvt*background.expr:                string
+! URxvt*background.interval:            seconds
+! URxvt*bell-command:                   string
+URxvt*matcher.button:                   1
+! URxvt*matcher.launcher:               string
+! URxvt*matcher.launcher.*:             string
+! URxvt*matcher.pattern.*:              string
+! URxvt*matcher.rend.*:                 string
+! URxvt*remote-clipboard.fetch:         string
+! URxvt*remote-clipboard.store:         string
+! URxvt*searchable-scrollback:          string
+! URxvt*selection-autotransform.*:      string
+! URxvt*selection-pastebin.cmd:         string
+! URxvt*selection-pastebin.url:         string
+! URxvt*selection.pattern-0:            string
+! URxvt*tab-bg:                         colour
+! URxvt*tab-fg:                         colour
+! URxvt*tabbar-bg:                      colour
+! URxvt*tabbar-fg:                      colour
+URxvt*url-launcher:                     /usr/bin/chromium

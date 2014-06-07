@@ -46,20 +46,10 @@ echo -e "\nFile updated: $OUTPUT_FILE\n"
 # update files to include in the git repository
 # (files that are external to my home directory)
 echo -e "Copying selected system files to $ADDL_FILES_PATH\n"
-if [ ! -d "$ADDL_FILES_PATH"/scripts ]; then
-  mkdir "$ADDL_FILES_PATH"/scripts
-fi
+[ ! -d "$ADDL_FILES_PATH"/scripts ] && mkdir "$ADDL_FILES_PATH"/scripts
 while IFS= read -r f; do
-  if [ ${f: -3} == ".sh" ]; then
-    cp $f "$ADDL_FILES_PATH"/scripts
-  else
-    cp $f $ADDL_FILES_PATH
-  fi
-  if [[ $? -ne 0 ]] ; then
-    echo "Error: did not copy $f"
-  else
-    echo "Success: copied $f"
-  fi
+  [ ${f: -3} == ".sh" ] && cp $f "$ADDL_FILES_PATH"/scripts || cp $f $ADDL_FILES_PATH
+  [ $? -ne 0 ] && echo "Error: did not copy $f" || echo "Success: copied $f"
 done < $ADDL_FILES_LIST
 echo
 
@@ -75,7 +65,7 @@ fi
 git add $ADDL_FILES_PATH
 git add -u
 git commit -m "`date +"scripted update: %a, %d %b %Y  %H:%M:%S"`"
-if [[ $? -ne 0 ]] ; then
+if [ $? -ne 0 ] ; then
   echo -e "\nError - exiting, files not staged."
   exit 1
 fi
@@ -92,7 +82,7 @@ fi
 # git push
 echo
 git push origin master
-if [[ $? -ne 0 ]] ; then
+if [ $? -ne 0 ] ; then
   echo -e "\nError - exiting, no files pushed."
   exit 1
 fi
