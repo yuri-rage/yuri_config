@@ -11,7 +11,7 @@
 hsetroot -fill ~/images/wallpaper.png
 
 # start compositor
-compton --config ~/.config/compton.conf -b
+compton --config "$HOME/.config/compton.conf" -b
 
 # recent system update starts nm-applet automatically (daemon support?)
 # nm-applet &
@@ -30,4 +30,4 @@ tint2 &
 
 # start conky system monitor(s)
 # conky -c ~/.config/conky/conkyrc_lua_solarized &
-conky -c ~/.config/conky/conkyrc_stickyclock &
+conky -c "$HOME/.config/conky/conkyrc_stickyclock" &

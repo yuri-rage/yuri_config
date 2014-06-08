@@ -1,208 +1,218 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- yuri - streamlined/stripped down from default -->
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
-	<menu id="apps-accessories-menu" label="Accessories">
-		<item label="File Search">
-			<action name="Execute">
-				<execute>catfish --fileman=thunar --path=/home/yuri </execute>
-			</action>
-		</item>
-	</menu>
-	<menu id="apps-editors-menu" label="Editors">
-		<item label="GVim">
-			<action name="Execute">
-				<command>gvim</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-					<wmclass>GVim</wmclass>
-				</startupnotify>
-			</action>
-		</item>
-	</menu>
-	<menu id="apps-term-menu" label="Terminals">
-		<item label="Rxvt Unicode">
-			<action name="Execute">
-				<command>urxvt</command>
-			</action>
-		</item>
-		<item label="Xterm">
-			<action name="Execute">
-				<command>xterm</command>
-			</action>
-		</item>
-	</menu>
-	<menu id="apps-net-menu" label="Internet">
-		<item label="Chromium">
-			<action name="Execute">
-				<command>chromium</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-					<wmclass>chromium</wmclass>
-				</startupnotify>
-			</action>
-		</item>
-	</menu>
-	<menu id="apps-office-menu" label="Office">
-		<item label="OpenOffice Base">
-			<action name="Execute">
-				<command>ooffice -base</command>
-			</action>
-		</item>
-		<item label="OpenOffice Calc">
-			<action name="Execute">
-				<command>ooffice -calc</command>
-			</action>
-		</item>
-		<item label="OpenOffice Draw">
-			<action name="Execute">
-				<command>ooffice -draw</command>
-			</action>
-		</item>
-		<item label="OpenOffice Impress">
-			<action name="Execute">
-				<command>ooffice -impress</command>
-			</action>
-		</item>
-		<item label="OpenOffice Math">
-			<action name="Execute">
-				<command>ooffice -math</command>
-			</action>
-		</item>
-		<item label="OpenOffice Printer Administration">
-			<action name="Execute">
-				<command>ooffice-printeradmin</command>
-			</action>
-		</item>
-		<item label="OpenOffice Writer">
-			<action name="Execute">
-				<command>ooffice -writer</command>
-			</action>
-		</item>
-	</menu>
-	<menu id="apps-multimedia-menu" label="Multimedia">
-		<item label="XBMC">
-			<action name="Execute">
-				<command>xbmc</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="VLC">
-			<action name="Execute">
-				<execute>vlc</execute>
-			</action>
-		</item>
-		<item label="xfburn">
-			<action name="Execute">
-				<command>xfburn</command>
-			</action>
-		</item>
-	</menu>
-	<menu id="apps-fileman-menu" label="File Managers">
-		<item label="Thunar">
-			<action name="Execute">
-				<command>Thunar</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-	</menu>
-	<menu id="apps-graphics-menu" label="Graphics">
-		<item label="Gimp">
-			<action name="Execute">
-				<command>gimp</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Inkscape">
-			<action name="Execute">
-				<command>inkscape</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Screenshot (desktop)">
-			<action name="Execute">
-				<execute>scrot -d 1 -e 'feh $f'</execute>
-			</action>
-		</item>
-		<item label="Screenshot (select)">
-			<action name="Execute">
-				<execute>scrot -s -b -e 'feh $f'</execute>
-			</action>
-		</item>
-	</menu>
-	<menu id="system-menu" label="System">
-		<item label="Openbox Configuration Manager">
-			<action name="Execute">
-				<command>obconf</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="lxappearance">
-			<action name="Execute">
-				<execute>lxappearance</execute>
-			</action>
-		</item>
-		<item label="Openbox Menu Editor">
-			<action name="Execute">
-				<execute>obmenu</execute>
-			</action>
-		</item>
-		<separator/>
-		<item label="Reconfigure Openbox">
-			<action name="Reconfigure"/>
-		</item>
-		<!-- yuri - added commands to restart desktop apps -->
-		<item label="Restart Compositor">
-			<action name="Execute">
-				<command>/usr/local/bin/comptonrestart.sh</command>
-			</action>
-		</item>
-		<item label="Restart tint2">
-			<action name="Execute">
-				<command>/usr/local/bin/tint2restart.sh</command>
-			</action>
-		</item>
-		<item label="Reload wallpaper">
-			<action name="Execute">
-				<command>sh -c 'hsetroot -fill ~/images/wallpaper.png'</command>
-			</action>
-		</item>
-	</menu>
-	<menu id="root-menu" label="Openbox 3">
-		<item label="Terminal">
-			<action name="Execute">
-				<execute>urxvt</execute>
-			</action>
-		</item>
-		<item label="Chromium">
-			<action name="Execute">
-				<execute>chromium</execute>
-			</action>
-		</item>
-		<separator/>
-		<menu id="apps-accessories-menu"/>
-		<menu id="apps-editors-menu"/>
-		<menu id="apps-graphics-menu"/>
-		<menu id="apps-net-menu"/>
-		<menu id="apps-office-menu"/>
-		<menu id="apps-multimedia-menu"/>
-		<menu id="apps-term-menu"/>
-		<menu id="apps-fileman-menu"/>
-		<separator/>
-		<menu id="system-menu"/>
-		<item label="Exit">
-			<action name="Execute">
-				<execute>oblogout</execute>
-			</action>
-		</item>
-	</menu>
+  <menu id="apps-accessories-menu" label="Accessories">
+    <item label="File Search">
+      <action name="Execute">
+        <execute>catfish --fileman=thunar --path=/home/yuri </execute>
+      </action>
+    </item>
+  </menu>
+  <menu id="apps-editors-menu" label="Editors">
+    <item label="GVim">
+      <action name="Execute">
+        <command>gvim</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <wmclass>GVim</wmclass>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+  <menu id="apps-term-menu" label="Terminals">
+    <item label="Rxvt Unicode">
+      <action name="Execute">
+        <command>urxvt</command>
+      </action>
+    </item>
+    <item label="Xterm">
+      <action name="Execute">
+        <command>xterm</command>
+      </action>
+    </item>
+  </menu>
+  <menu id="apps-net-menu" label="Internet">
+    <item label="Chromium">
+      <action name="Execute">
+        <command>chromium</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <wmclass>chromium</wmclass>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+  <menu id="apps-office-menu" label="Office">
+    <item label="OpenOffice Base">
+      <action name="Execute">
+        <command>ooffice -base</command>
+      </action>
+    </item>
+    <item label="OpenOffice Calc">
+      <action name="Execute">
+        <command>ooffice -calc</command>
+      </action>
+    </item>
+    <item label="OpenOffice Draw">
+      <action name="Execute">
+        <command>ooffice -draw</command>
+      </action>
+    </item>
+    <item label="OpenOffice Impress">
+      <action name="Execute">
+        <command>ooffice -impress</command>
+      </action>
+    </item>
+    <item label="OpenOffice Math">
+      <action name="Execute">
+        <command>ooffice -math</command>
+      </action>
+    </item>
+    <item label="OpenOffice Printer Administration">
+      <action name="Execute">
+        <command>ooffice-printeradmin</command>
+      </action>
+    </item>
+    <item label="OpenOffice Writer">
+      <action name="Execute">
+        <command>ooffice -writer</command>
+      </action>
+    </item>
+  </menu>
+  <menu id="apps-multimedia-menu" label="Multimedia">
+    <item label="XBMC">
+      <action name="Execute">
+        <command>xbmc</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="VLC">
+      <action name="Execute">
+        <execute>vlc</execute>
+      </action>
+    </item>
+    <item label="xfburn">
+      <action name="Execute">
+        <command>xfburn</command>
+      </action>
+    </item>
+  </menu>
+  <menu id="apps-fileman-menu" label="File Managers">
+    <item label="Thunar">
+      <action name="Execute">
+        <command>Thunar</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+  <menu id="apps-graphics-menu" label="Graphics">
+    <item label="Gimp">
+      <action name="Execute">
+        <command>gimp</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Inkscape">
+      <action name="Execute">
+        <command>inkscape</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Screenshot (desktop)">
+      <action name="Execute">
+        <execute>scrot -d 1 -e 'feh $f'</execute>
+      </action>
+    </item>
+    <item label="Screenshot (select)">
+      <action name="Execute">
+        <execute>scrot -s -b -e 'feh $f'</execute>
+      </action>
+    </item>
+  </menu>
+  <menu id="system-menu" label="System">
+    <item label="Openbox Configuration Manager">
+      <action name="Execute">
+        <command>obconf</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="lxappearance">
+      <action name="Execute">
+        <execute>lxappearance</execute>
+      </action>
+    </item>
+    <item label="Openbox Menu Editor">
+      <action name="Execute">
+        <execute>obmenu</execute>
+      </action>
+    </item>
+    <separator/>
+    <item label="Reconfigure Openbox">
+      <action name="Reconfigure"/>
+    </item>
+    <!-- yuri - added commands to restart desktop apps -->
+    <item label="Restart all desktop apps">
+      <action name="Execute">
+        <command>/usr/local/bin/killstart.sh "compton --config ~/.config/compton.conf -b" tint2 "conky -c ~/.config/conky/conkyrc_stickyclock"</command>
+      </action>
+    </item>
+    <item label="Restart compositor">
+      <action name="Execute">
+        <command>/usr/local/bin/killstart.sh "compton --config ~/.config/compton.conf -b"</command>
+      </action>
+    </item>
+    <item label="Restart tint2">
+      <action name="Execute">
+        <command>/usr/local/bin/killstart.sh tint2</command>
+      </action>
+    </item>
+    <item label="Restart conky">
+      <action name="Execute">
+        <command>/usr/local/bin/killstart.sh "conky -c ~/.config/conky/conkyrc_stickyclock"</command>
+      </action>
+    </item>
+    <item label="Reload wallpaper">
+      <action name="Execute">
+        <command>sh -c 'hsetroot -fill ~/images/wallpaper.png'</command>
+      </action>
+    </item>
+  </menu>
+  <menu id="root-menu" label="Openbox 3">
+    <item label="Terminal">
+      <action name="Execute">
+        <execute>urxvt</execute>
+      </action>
+    </item>
+    <item label="Chromium">
+      <action name="Execute">
+        <execute>chromium</execute>
+      </action>
+    </item>
+    <separator/>
+    <menu id="apps-accessories-menu"/>
+    <menu id="apps-editors-menu"/>
+    <menu id="apps-graphics-menu"/>
+    <menu id="apps-net-menu"/>
+    <menu id="apps-office-menu"/>
+    <menu id="apps-multimedia-menu"/>
+    <menu id="apps-term-menu"/>
+    <menu id="apps-fileman-menu"/>
+    <separator/>
+    <menu id="system-menu"/>
+    <item label="Exit">
+      <action name="Execute">
+        <execute>oblogout</execute>
+      </action>
+    </item>
+  </menu>
 </openbox_menu>
