@@ -47,7 +47,7 @@ URxvt*fadeColor:                        #002b36
 ! URxvt*insecure:                       boolean
 URxvt*cursorUnderline:                  true
 URxvt*cursorBlink:                      true
-URxvt*pointerBlank:                     false
+URxvt*pointerBlank:                     true
 ! yuri - solarized colors for both urxvt and xterm
 !      - true transparency supported by urxvt
 !      - use [alpha]#rrggbb format
@@ -126,6 +126,7 @@ URxvt*cursorColor:                      #93a1a1
 URxvt*iconFile:                         /usr/share/icons/Faenza/apps/48/utilities-terminal.png
 URxvt*font:                             xft:Consolas:pixelsize=11
 URxvt*boldFont:                         xft:Consolas:bold:pixelsize=11
+XTerm*faceName:                         Consolas:size=8:antialias=true
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
 ! URxvt*intensityStyles:                boolean
