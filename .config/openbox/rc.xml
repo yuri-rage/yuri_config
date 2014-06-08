@@ -149,7 +149,8 @@
        Many programs reserve space automatically, but you can use this in other cases. -->
   <margins>
     <top>0</top>
-    <bottom>0</bottom>
+    <!-- margin for tint2 autohide -->
+    <bottom>2</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
