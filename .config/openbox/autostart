@@ -30,4 +30,4 @@ tint2 &
 
 # start conky system monitor(s)
 # conky -c ~/.config/conky/conkyrc_lua_solarized &
-conky -c "$HOME/.config/conky/conkyrc_stickyclock" &
+conky -c "$HOME/.config/conky/stickyclock.conky" &

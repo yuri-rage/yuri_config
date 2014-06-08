@@ -163,7 +163,7 @@
     <!-- yuri - added commands to restart desktop apps -->
     <item label="Restart all desktop apps">
       <action name="Execute">
-        <command>/usr/local/bin/killstart.sh "compton --config ~/.config/compton.conf -b" tint2 "conky -c ~/.config/conky/conkyrc_stickyclock"</command>
+        <command>/usr/local/bin/killstart.sh "compton --config ~/.config/compton.conf -b" tint2 "conky -c ~/.config/conky/stickyclock.conky"</command>
       </action>
     </item>
     <item label="Restart compositor">
@@ -178,7 +178,7 @@
     </item>
     <item label="Restart conky">
       <action name="Execute">
-        <command>/usr/local/bin/killstart.sh "conky -c ~/.config/conky/conkyrc_stickyclock"</command>
+        <command>/usr/local/bin/killstart.sh "conky -c ~/.config/conky/stickyclock.conky"</command>
       </action>
     </item>
     <item label="Reload wallpaper">
