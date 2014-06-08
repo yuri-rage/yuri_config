@@ -7,10 +7,10 @@
 
 # if no argument, usage/exit with error status
 usage(){
-	echo "Usage: `basename $0` command1 command2 .."
-    echo -e "\nCommands with arguments must be quoted:"
-    echo "       `basename $0` \"command --with args\""
-	exit 1
+  echo "Usage: `basename $0` command1 command2 .."
+  echo -e "\nCommands with arguments must be quoted:"
+  echo "       `basename $0` \"command --with args\""
+  exit 1
 }
 [ -z "$1" ] && usage
 
