@@ -57,7 +57,9 @@ echo
 # ask whether to stage update files for git
 # default = yes
 read -n 1 -r -p 'Stage tracked files (git add/commit)? [Y/n] '
-if [[ $REPLY =~ ^[Nn]$ ]]; then
+REPLY="${REPLY:=Y}"
+echo $REPLY
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   echo -e "\nExiting - files not staged."
   exit 0
 fi
