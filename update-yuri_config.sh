@@ -58,7 +58,6 @@ echo
 # default = yes
 read -n 1 -r -p 'Stage tracked files (git add/commit)? [Y/n] '
 REPLY="${REPLY:=Y}"
-echo $REPLY
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   echo -e "\nExiting - files not staged."
   exit 0
@@ -77,7 +76,8 @@ echo -e "\nFiles staged for upload.\n"
 # ask whether to push files to git
 # default = yes
 read -n 1 -r -p 'Push files to current git branch? [Y/n] '
-if [[ $REPLY =~ ^[Nn]$ ]]; then
+REPLY="${REPLY:=Y}"
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   echo -e "\nExiting - no files pushed."
   exit 0
 fi
