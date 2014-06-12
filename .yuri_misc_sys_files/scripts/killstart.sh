@@ -21,7 +21,7 @@ for ARG in "$@"; do
   # accept commands with multiple arguments
   BASECMD=`echo "$ARG" | awk '{ print $1 }'`
   # if process(es) running, kill 'em
-  pgrep $BASECMD && pkill $BASECMD
+  pgrep -x $BASECMD && pkill -x $BASECMD
 done
 
 # run specified command(s)

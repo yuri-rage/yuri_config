@@ -1,0 +1,9 @@
+yuri - Jun 2014
+
+Put all conkyrc files in $HOME/.config/conky
+
+All files ending in .desktop will be run by /usr/local/bin/conkystart.sh
+
+$HOME/.config/openbox/autostart calls conkystart.sh
+
+Suggest symlinks ending in .desktop rather than renaming files
