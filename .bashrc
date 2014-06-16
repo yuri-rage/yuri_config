@@ -5,8 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# include common options for commands
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias df='df -hT -x tmpfs -x devtmpfs'
+alias free='free -ht'
 
 # PS1='\u@\h: \w\$ '
 # yuri - nicer looking command prompt in solarized scheme
