@@ -3,6 +3,13 @@
 #
 # yuri - Jul 2014
 
+BROWSER='/usr/bin/chromium'
+if [ -n "$WINDOWID" ]; then # this shell is running in X
+  EDITOR='/usr/bin/gvim'
+else
+  EDITOR='/usr/bin/vim'
+fi
+
 ZSH="$HOME/.config/zsh"
 PLUGINS="$ZSH/plugins"
 CUSTOM="$ZSH/custom"
@@ -42,12 +49,13 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+# nicely formatted prompt
+PROMPT="%{$fg[white]%}%n %{$fg_no_bold[blue]%}%~ %{$fg[white]%}%# %{$reset_color%}"
+
 # yuri - set fixed window title for transparent desktop terminal
 #   test for custom named terminal with same window id as the present one
 #   if it matches, set the window title so that the compositor and
 #   window manager can treat it appropriately
-# nicely formatted prompt
-PROMPT="%{$fg[white]%}%n %{$fg_no_bold[blue]%}%~ %{$fg[white]%}%# %{$reset_color%}"
 
 if [ -n "$WINDOWID" ]; then # this shell is running in X
 
@@ -70,12 +78,7 @@ if [ -n "$WINDOWID" ]; then # this shell is running in X
   fi
 fi
 
-# aliases
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias df='df -hT -x tmpfs -x devtmpfs'
-alias free='free -ht'
-
-# plugins
-source $CUSTOM/git-prompt.zsh
+# plugins / scripts
+source $CUSTOM/git-prompt.zsh # better/faster git prompt than the oh-my-zsh plugin
+source $CUSTOM/aliases.zsh    # all aliases in one place
 # source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
