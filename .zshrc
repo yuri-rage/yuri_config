@@ -32,13 +32,31 @@ ZLS_COLORS="ma=47:$LS_COLORS"
 # enable arrow key navigation of tab completion options
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)ZLS_COLORS}
-# enable tab completion of aliases
+
+# tab completion options
 setopt completealiases
+unsetopt flowcontrol
+setopt auto_menu
+setopt complete_in_word
+setopt always_to_end
+
+# in order try:
+#   simple tab completion
+#   case insensitive completion
+#   simple substring completion
+#   case insensitive substring completion
+#   by defining multiple patterns, completion performance remains fast
+#     while still affording tons of flexibility
+zstyle ':completion:*' matcher-list '' 'm:{A-ZÄÖÜa-zäöü}={a-zäöüA-ZÄÖÜ}'                  \
+                                       'r:|[._-]=* r:|=*' 'l:|=* r:|=*'                   \
+                                       'm:{A-ZÄÖÜa-zäöü}={a-zäöüA-ZÄÖÜ} r:|[._-]=* r:|=*' \
+                                       'm:{A-ZÄÖÜa-zäöü}={a-zäöüA-ZÄÖÜ} l:|=* r:|=*'
 
 # command history
 HISTFILE=~/.histfile
 HISTSIZE=4096
 SAVEHIST=4096
+
 # prevent duplicate history entries
 setopt HIST_IGNORE_DUPS
 
@@ -48,6 +66,30 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+# a few more keybindings
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+# vi mode settings
+bindkey -v
+KEYTIMEOUT=1 # reduce time to transition between INSERT and NORMAL
+# visual indication of INSERT vs NORMAL
+# perhaps a bit more complex with substitution than required
+#   in order to prepend vi mode to righthand prompt
+function zle-line-init zle-keymap-select {
+    VI_MODE="${${KEYMAP/vicmd/[NORMAL]}/(main|viins)/[INSERT]}"
+    RPS1=${RPS1/\[*\] /}
+    RPS1="$VI_MODE $RPS1"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
 
 # nicely formatted prompt
 PROMPT="%{$fg[white]%}%n %{$fg_no_bold[blue]%}%~ %{$fg[white]%}%# %{$reset_color%}"
@@ -81,4 +123,4 @@ fi
 # plugins / scripts
 source $CUSTOM/git-prompt.zsh # better/faster git prompt than the oh-my-zsh plugin
 source $CUSTOM/aliases.zsh    # all aliases in one place
-# source $PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS/history-substring-search/history-substring-search.zsh
