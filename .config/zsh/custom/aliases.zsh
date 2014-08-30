@@ -6,6 +6,7 @@ alias grep='grep --color=auto'
 alias df='df -hT -x tmpfs -x devtmpfs'
 alias free='free -ht'
 alias vi='vim'
+alias packer='packer --noedit'
 
 # give common file types default behavior
 alias -s com="$BROWSER"
