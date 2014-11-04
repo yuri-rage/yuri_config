@@ -696,7 +696,7 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <mousebind button="Up" action="Click">
+      <!-- mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
         </action>
@@ -705,7 +705,7 @@
         <action name="GoToDesktop">
           <to>next</to>
         </action>
-      </mousebind>
+      </mousebind> -->
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>

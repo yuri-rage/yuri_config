@@ -8,7 +8,8 @@ own_window_transparent yes
 own_window_argb_visual yes
 own_window_type normal
 # own_window_class conky-clock
-own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+# own_window_hints undecorated,above,sticky,skip_taskbar,skip_pager
 background no
 double_buffer yes
 draw_outline no

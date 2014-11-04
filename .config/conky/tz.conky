@@ -20,16 +20,41 @@ gap_x 100
 gap_y 20
 no_buffers yes
 uppercase no
-override_utf8_locale no
+override_utf8_locale yes
 default_color 839496
+temperature_unit fahrenheit
 
 TEXT
+${font Rock Salt:size=14}${alignc}Vorlauf${font}
+
 Mountain: ${alignr}${tztime America/Denver %H:%M:%S}
 Eastern: ${alignr}${tztime America/New_York %H:%M:%S}
 Zulu:    ${alignr}${tztime Etc/Zulu %H:%M:%S}
 
-CPU $alignr ${cpu cpu0}%
-${cpubar cpu0}
+SSD $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
 
 MEM $alignc $mem / $memmax $alignr $memperc%
 $membar
+
+CPU Avg $alignr ${cpu cpu0}%
+${cpubar cpu0}
+${font Roboto:bold:size=8}Core 1$alignr ${cpu cpu1}%
+${cpubar 3,230 cpu1}
+Core 2$alignr ${cpu cpu2}%
+${cpubar 3,230 cpu2}
+Core 3$alignr ${cpu cpu3}%
+${cpubar 3,230 cpu3}
+Core 4$alignr ${cpu cpu4}%
+${cpubar 3,230 cpu4}${font}
+
+CPU Temp $alignr ${hwmon 1 temp 2}°F
+${execbar sensors | grep 'CPUTIN' | cut -f2 -d '+' | cut -f1 -d'.'}
+
+NVidia GPU Temp $alignr ${hwmon 0 temp 1}°F
+${execbar sensors | grep 'temp1' | cut -f2 -d '+' | cut -f1 -d'.'}
+
+Wifi Signal $alignr ${wireless_link_qual_perc wlp2s0}%
+${wireless_link_bar wlp2s0}
+
+Battery: $alignr ${execi 60 acpi | awk '{print$4}' | cut -b -3}

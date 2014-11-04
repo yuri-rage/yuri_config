@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- yuri - streamlined/stripped down from default -->
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
-	<menu id="apps-accessories-menu" label="Accessories">
-		<item label="File Search">
-			<action name="Execute">
-				<execute>catfish --fileman=thunar --path=/home/yuri </execute>
-			</action>
-		</item>
-	</menu>
 	<menu id="apps-editors-menu" label="Editors">
 		<item label="GVim">
 			<action name="Execute">
@@ -16,6 +9,13 @@
 					<enabled>yes</enabled>
 					<wmclass>GVim</wmclass>
 				</startupnotify>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-accessories-menu" label="Accessories">
+		<item label="File Search">
+			<action name="Execute">
+				<execute>catfish --fileman=thunar --path=/home/yuri </execute>
 			</action>
 		</item>
 	</menu>
@@ -65,6 +65,33 @@
 		</item>
 	</menu>
 	<menu id="system-menu" label="System">
+		<menu id="system-menu-232532" label="Brightness">
+			<item label="Increase">
+				<action name="Execute">
+					<execute>brightness.sh up</execute>
+				</action>
+			</item>
+			<item label="Decrease">
+				<action name="Execute">
+					<execute>brightness.sh down</execute>
+				</action>
+			</item>
+			<item label="Set 100%">
+				<action name="Execute">
+					<execute>brightness.sh 100</execute>
+				</action>
+			</item>
+			<item label="Set 50%">
+				<action name="Execute">
+					<execute>brightness.sh 50</execute>
+				</action>
+			</item>
+			<item label="Set 1%">
+				<action name="Execute">
+					<execute>brightness.sh 1</execute>
+				</action>
+			</item>
+		</menu>
 		<item label="Openbox Configuration Manager">
 			<action name="Execute">
 				<command>obconf</command>
@@ -120,9 +147,9 @@
 				<execute>urxvt</execute>
 			</action>
 		</item>
-		<item label="Chromium">
+		<item label="Chrome">
 			<action name="Execute">
-				<execute>chromium</execute>
+				<execute>google-chrome-stable</execute>
 			</action>
 		</item>
 		<item label="Thunar">
