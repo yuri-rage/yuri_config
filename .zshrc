@@ -121,6 +121,6 @@ if [ -n "$WINDOWID" ]; then # this shell is running in X
 fi
 
 # plugins / scripts
-source $CUSTOM/git-prompt.zsh # better/faster git prompt than the oh-my-zsh plugin
+# source $CUSTOM/git-prompt.zsh # better/faster git prompt than the oh-my-zsh plugin
 source $CUSTOM/aliases.zsh    # all aliases in one place
 source $PLUGINS/history-substring-search/history-substring-search.zsh

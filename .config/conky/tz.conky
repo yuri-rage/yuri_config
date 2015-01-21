@@ -27,11 +27,10 @@ temperature_unit fahrenheit
 TEXT
 ${font Rock Salt:size=14}${alignc}Vorlauf${font}
 
-Mountain: ${alignr}${tztime America/Denver %H:%M:%S}
-Eastern: ${alignr}${tztime America/New_York %H:%M:%S}
+Central: ${alignr}${tztime America/Chicago %H:%M:%S}
 Zulu:    ${alignr}${tztime Etc/Zulu %H:%M:%S}
 
-SSD $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+HDD $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
 ${fs_bar /}
 
 MEM $alignc $mem / $memmax $alignr $memperc%
@@ -57,4 +56,6 @@ ${execbar sensors | grep 'temp1' | cut -f2 -d '+' | cut -f1 -d'.'}
 Wifi Signal $alignr ${wireless_link_qual_perc wlp2s0}%
 ${wireless_link_bar wlp2s0}
 
-Battery: $alignr ${execi 60 acpi | awk '{print$4}' | cut -b -3}
+Battery: $alignr ${execi 60 acpi | awk '{ sub (/\%,/, "%"); print $3 " " $4 }'}
+
+${execpi 120 [ -e /var/local/updates-available-sh.info ] && cat  /var/local/updates-available-sh.info || echo "Update info not available"}
