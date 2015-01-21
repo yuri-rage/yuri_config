@@ -5,3 +5,4 @@
 /usr/local/bin/*.sh
 /etc/pacman.d/mirrorlist
 /etc/pacman.conf
+/usr/lib/systemd/system/updates-available.*

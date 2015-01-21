@@ -1,0 +1,6 @@
+[Unit]
+Description=Check for Arch updates
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/updates-available.sh

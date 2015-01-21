@@ -1,0 +1,10 @@
+[Unit]
+Description=Hourly check for Arch updates
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+Unit=updates-available.service
+
+[Install]
+WantedBy=multi-user.target
