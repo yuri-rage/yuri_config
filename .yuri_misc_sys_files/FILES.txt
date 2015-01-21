@@ -3,3 +3,5 @@
 /etc/bash.bashrc
 /var/lib/AccountsService/users/yuri
 /usr/local/bin/*.sh
+/etc/pacman.d/mirrorlist
+/etc/pacman.conf
