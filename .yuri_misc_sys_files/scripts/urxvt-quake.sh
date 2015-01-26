@@ -22,6 +22,15 @@
 #   <focus>yes</focus>
 #   <desktop>all</desktop>
 # </application>
+#
+# for similar funcionality in bspwm, this script is less useful, instead map this to a key in sxhkdrc:
+#   (note, geometry is hard coded into the keymapped command in this case)
+#  xdotool search --onlyvisible --classname URxvtQuake windowunmap \
+#    || xdotool search --classname URxvtQuake windowmap \
+#    || urxvt -name URxvtQuake -geometry 110x20+297+1
+#
+# and add this rule to bspwmrc
+# bspc rule -a URxvtQuake sticky=on floating=on
 
 # grab the window ID of the urxvt-quake terminal window
 WINID=`wmctrl -lx | grep URxvtQuake.URxvt | awk '{ print $1 }'`

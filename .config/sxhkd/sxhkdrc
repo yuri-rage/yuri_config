@@ -131,6 +131,12 @@ super + @button{1-3}
 super + Return
 	urxvt
 
+# open a "scratchpad" terminal (quake-style, in this case, on a 1366x768 display)
+F12
+  xdotool search --onlyvisible --classname URxvtQuake windowunmap \
+    || xdotool search --classname URxvtQuake windowmap \
+    || urxvt -name URxvtQuake -geometry 110x20+297+1
+
 # open dmenu
 super + space
 	dmenu_run
@@ -138,6 +144,16 @@ super + space
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# volume key bindings
+{XF86AudioLowerVolume} 
+    amixer -q set Master 5-
+
+{XF86AudioRaiseVolume} 
+    amixer -q set Master 5+
+
+{XF86AudioMute}
+    $(amixer get Master | grep off > /dev/null && amixer -q set Master unmute) || amixer -q set Master mute
 
 # some simple notifications in lieu of a systray
 # might be better to dedicate a desktop to system performance

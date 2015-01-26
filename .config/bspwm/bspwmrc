@@ -11,10 +11,13 @@ bspc config focus_by_distance   true
 bspc monitor -d 01 02 03 04 05 06 07 08 09 10
 
 bspc rule -a Gimp floating=on
+bspc rule -a URxvtQuake sticky=on floating=on
 
 xsetroot -cursor_name left_ptr &
 hsetroot -fill ~/images/wallpaper.png
 compton --config "$HOME/.config/compton.conf" -b
+udiskie --tray &
+nm-applet &
 numlockx on &
-tint2 &
-
+urxvt &
+sleep 1 && tint2 &

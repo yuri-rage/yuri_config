@@ -4,6 +4,8 @@
 
 # yuri - Nov 2014
 
+# obsoleted by (grub) kernel parameter video.use_native_backlight=0 on Asus K55A laptop
+
 # if no argument, usage/exit with error status
 usage(){
   echo "Usage: `basename $0` [brightness]"

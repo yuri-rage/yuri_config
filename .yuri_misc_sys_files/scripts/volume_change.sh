@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# wrapper for amixer volume changes - sends notifications to wm
+
 step=5
 
 if [[ $# -eq 1 ]]; then
