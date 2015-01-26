@@ -1,0 +1,20 @@
+#! /bin/sh
+
+bspc config border_width        1
+bspc config window_gap          0
+
+bspc config split_ratio         0.50
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+bspc config focus_by_distance   true
+
+bspc monitor -d 01 02 03 04 05 06 07 08 09 10
+
+bspc rule -a Gimp floating=on
+
+xsetroot -cursor_name left_ptr &
+hsetroot -fill ~/images/wallpaper.png
+compton --config "$HOME/.config/compton.conf" -b
+numlockx on &
+tint2 &
+

@@ -1,0 +1,30 @@
+use_xft yes
+xftfont Consolas:size=7
+xftalpha 1.0
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_type normal
+# own_window_class conky-clock
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+background no
+double_buffer yes
+draw_outline no
+draw_borders no
+imlib_cache_size 0
+draw_shades no
+alignment bottom_right
+gap_x 20
+gap_y 10
+no_buffers yes
+uppercase no
+override_utf8_locale yes
+default_color 839496
+temperature_unit fahrenheit
+text_buffer_size 2048
+
+TEXT
+${execi 300 archey | sed 's/\x1b\[[0-9;]*m//g'}
+

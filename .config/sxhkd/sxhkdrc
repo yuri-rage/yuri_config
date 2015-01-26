@@ -1,0 +1,152 @@
+#
+# bspwm hotkeys
+#
+
+# graceful exit (calls modified crunchbang exit script)
+# if systemd is in use, need to modify /etc/systemd/logind.conf to ignore power button events
+{XF86PowerOff}
+    /usr/local/bin/bspwm-exit
+
+# exit bspwm
+super + alt + Escape
+	bspc quit
+
+# close/kill window
+super + w
+	bspc window -c
+
+# next desktop
+super + t
+	bspc desktop -l next
+
+# balance tree
+super + b
+	bspc desktop -B
+
+# toggle floating/fullscreen
+super + {s,f}
+	bspc window -t {floating,fullscreen}
+
+# set focus on previous window/desktop
+super + {grave,Tab}
+	bspc {window,desktop} -f last
+
+# swap position of current window with the last one
+super + apostrophe
+	bspc window -s last
+
+# set focus to windows in "historical" order
+super + {o,i}
+	bspc control --record-history off; \
+	bspc window {older,newer} -f; \
+	bspc control --record-history on
+
+# swap position of current window with the last one (in manual mode)
+# seems useless
+super + y
+	bspc window -w last.manual
+
+# swap this window with the largest one in the layout
+super + m
+	bspc window -s biggest
+
+# switch/move window (vim keybinding)
+super + {_,shift + }{h,j,k,l}
+	bspc window -{f,s} {left,down,up,right}
+
+# switch window sequentially (like an app/task switcher)
+super + {_,shift + }c
+	bspc window -f {next,prev}
+
+# circulate binary tree leaves back/forward ("rotate" window layout)
+super + {comma,period}
+	bspc desktop -C {backward,forward}
+
+# rotate binary tree clockwise/counter-clockwise
+super + ctrl + {comma,period}
+    bspc desktop -R {-90,90}
+
+# flip (mirror) binary tree horizontally/vertically
+super + alt + {comma,period}
+    bspc desktop -F {vertical,horizontal}
+
+# switch desktops sequentially
+super + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+# pre-select next window split location
+super + ctrl + {h,j,k,l}
+	bspc window -p {left,down,up,right}
+
+# cancel pre-selection of window/desktop
+super + ctrl + {_,shift + }space
+	bspc {window -p cancel,desktop -c}
+
+# resize window outwards(?)
+super + alt + {h,j,k,l}
+	bspc window -e {left -10,down +10,up -10,right +10}
+
+# resize window inwards(?)
+super + alt + shift + {h,j,k,l}
+	bspc window -e {right -10,up +10,down -10,left +10}
+
+# set focus to desktop / send window to desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} ^{1-9,10}
+
+# man page says "set the splitting ratio of the selected window" (appears useless)
+# super + ctrl + {1-9}
+# 	bspc window -r 0.{1-9}
+
+# adjust desktop split ratio - replaced window ratio command above
+super + ctrl + {1-9}
+	bspc config -d focused split_ratio {0.10,0.20,0.30,0.40,0.50,0.60,0.70,0.80,0.90};\
+	bspc desktop --equalize
+
+# dynamic window gaps (mostly just showing off...)
+super + {minus,equal}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
+
+# click to focus
+~button1
+	bspc pointer -g focus
+
+# move/resize window
+super + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+# send the coordinates of the pointer to the current action (don't change this)
+super + !button{1-3}
+	bspc pointer -t %i %i
+
+# terminate the current pointer action (don't change this)
+super + @button{1-3}
+	bspc pointer -u
+
+#
+# wm independent hotkeys
+#
+
+# open a terminal
+super + Return
+	urxvt
+
+# open dmenu
+super + space
+	dmenu_run
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# some simple notifications in lieu of a systray
+# might be better to dedicate a desktop to system performance
+
+# show acpi output (battery status)
+super + a
+    notify-send -t 5000 "`acpi`"
+
+# show current date/time
+super + d
+    notify-send -t 5000 "`date +'%H:%M   %a, %d %b %Y'`"
+
