@@ -1,5 +1,5 @@
 [User]
 Language=en_US.utf8
-XSession=openbox
+XSession=bspwm
 Icon=/var/lib/AccountsService/icons/yuri.png
 SystemAccount=false

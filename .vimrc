@@ -13,6 +13,9 @@ if has('gui_running')
   set guifont=Consolas\ 10
 endif
 
+" make xclipboard more easily accessible
+set clipboard=unnamedplus
+
 " collate .swp files - don't keep them in the working directory
 set directory=~/.vim/tmp,/tmp,.
 set backupdir=~/.vim/tmp,/tmp,.

@@ -7,6 +7,9 @@ alias df='df -hT -x tmpfs -x devtmpfs'
 alias free='free -ht'
 alias vi='vim'
 alias packer='packer --noedit'
+alias hackterm='nohup urxvt -fg "rgb:00/aa/00" -bg "rgba:0000/0000/0000/ee00" -e zsh -c "cmatrix -aBls && zsh" > /dev/null 2>&1 &'
+alias cmatrix='cmatrix -aBls'
+alias checklibs='lsof +c 0 | grep '\''DEL.*lib'\'' | awk '\''1 { print $1 ": " $NF }'\'' | sort -u'
 
 # give common file types default behavior
 alias -s com="$BROWSER"
