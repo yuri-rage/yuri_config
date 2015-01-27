@@ -8,4 +8,4 @@
 /usr/lib/systemd/system/updates-available.*
 /usr/local/bin/bspwm-exit
 /usr/share/xsessions/bspwm.desktop
-/usr/bin/bspwm.session
+/usr/bin/bspwm-session
