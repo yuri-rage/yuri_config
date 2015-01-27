@@ -13,6 +13,20 @@ if has('gui_running')
   set guifont=Consolas\ 10
 endif
 
+" change cursor shape based on mode
+if &term =~ "^rxvt" || &term=~ "^xterm"
+  " blinking underscore
+  let &t_SI .= "\<Esc>[3 q"
+  " blinking block
+  let &t_EI .= "\<Esc>[1 q"
+  " reset to blinking underscore on exit
+  autocmd VimLeave * silent !echo -ne "\033[3 q"
+  " 1 or 0 -> blinking block
+  " 2 -> solid block
+  " 3 -> blinking underscore
+  " 4 -> solid underscore
+endif
+
 " make xclipboard more easily accessible
 set clipboard=unnamedplus
 

@@ -84,8 +84,7 @@ bindkey '^r' history-incremental-search-backward
 bindkey -v
 KEYTIMEOUT=1 # reduce time to transition between INSERT and NORMAL
 
-# uncomment for 
-# visual indication of INSERT vs NORMAL
+# right prompt indication of INSERT vs NORMAL vi modes
 # perhaps a bit more complex with substitution than required
 #   in order to prepend vi mode to righthand prompt
 # function zle-line-init zle-keymap-select {
@@ -97,6 +96,25 @@ KEYTIMEOUT=1 # reduce time to transition between INSERT and NORMAL
 # }
 # zle -N zle-line-init
 # zle -N zle-keymap-select
+
+# cursor shape indication of INSERT vs NORMAL vi modes
+# supported (at a minimum) by rxvt-unicode-256color and xterm
+zle-keymap-select () {
+  if [[ "$TERM" =~ "^rxvt|^xterm" ]]; then
+if [ $KEYMAP = vicmd ]; then
+echo -ne "\033[1 q"
+    else
+echo -ne "\033[3 q"
+    fi
+fi
+}
+zle -N zle-keymap-select
+
+zle-line-init () {
+  zle -K viins
+  echo -ne "\033[3 q"
+}
+zle -N zle-line-init
 
 # nicely formatted prompt
 PROMPT="%m%{$fg[white]%} %n %{$fg_no_bold[blue]%}%~ %{$fg[white]%}%# %{$reset_color%}"

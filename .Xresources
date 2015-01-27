@@ -52,7 +52,7 @@ URxvt*fadeColor:                        #002b36
 ! URxvt*mouseWheelScrollPage:           boolean
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
-URxvt*cursorUnderline:                  true
+! URxvt*cursorUnderline:                  true
 URxvt*cursorBlink:                      true
 URxvt*pointerBlank:                     true
 ! yuri - solarized colors for both urxvt and xterm
