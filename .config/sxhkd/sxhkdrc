@@ -54,7 +54,7 @@ super + m
 super + {_,shift + }{h,j,k,l}
 	bspc window -{f,s} {left,down,up,right}
 
-# switch window sequentially (like an app/task switcher)
+# switch windows sequentially (like an app/task switcher)
 super + {_,shift + }c
 	bspc window -f {next,prev}
 
