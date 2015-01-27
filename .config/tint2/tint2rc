@@ -38,7 +38,7 @@ panel_dock = 0
 wm_menu = 1
 panel_layer = top
 panel_background_id = 1
-panel_items = TS
+panel_items = TSC
 
 # Panel Autohide
 autohide = 1
@@ -130,13 +130,13 @@ mouse_scroll_down = iconify
 
 # Battery
 battery = 0
-battery_low_status = 25
-battery_low_cmd = notify-send "battery low"
-battery_hide = 0
+battery_low_status = 20
+battery_low_cmd = notify-send "Battery low"
+battery_hide = never
 bat1_font = Roboto 8
 bat2_font = Roboto 6
 battery_font_color = #FFFFFF 74
-battery_padding = 0 0
+battery_padding = 34 0
 battery_background_id = 4
 
 # End of config

@@ -6,3 +6,4 @@
 /etc/pacman.d/mirrorlist
 /etc/pacman.conf
 /usr/lib/systemd/system/updates-available.*
+/usr/local/bin/bspwm-exit
