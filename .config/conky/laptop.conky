@@ -15,7 +15,7 @@ draw_borders no
 imlib_cache_size 0
 draw_shades no
 alignment top_right
-gap_x 100
+gap_x 20
 gap_y 20
 no_buffers yes
 uppercase no

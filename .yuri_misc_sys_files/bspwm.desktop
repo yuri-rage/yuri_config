@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=XSession
 Exec=bspwm-session
-TryExec=bspwm
+TryExec=bspwm-session
 Name=Bspwm

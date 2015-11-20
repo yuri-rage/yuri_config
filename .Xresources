@@ -5,17 +5,17 @@ Xft.rgba:       rgb
 Xft.hinting:	true
 Xft.hintstyle:  hintslight
 
-! yuri - all urxvt X resources are listed below, in the order output by
-!        urxvt --help 2>&1| sed -n '/:  /s/^ */! URxvt*/gp'
-!
-!        use xrdb .Xresources to reload this file
-
 ! solarized dmenu - requires patched dmenu
 dmenu.font:                             xft:Consolas:pixelsize=12
 dmenu.foreground:                       #839496
 dmenu.background:                       #002b36
 dmenu.selforeground:                    #839496
 dmenu.selbackground:                    #eee8d5
+
+! yuri - all urxvt X resources are listed below, in the order output by
+!        urxvt --help 2>&1| sed -n '/:  /s/^ */! URxvt*/gp'
+!
+!        use xrdb .Xresources to reload this file
 
 ! URxvt*termName:                       string
 URxvt*geometry:                         110x30+100+100
@@ -43,7 +43,7 @@ URxvt*scrollBar:                        false
 ! URxvt*blurRadius:                     HxV
 URxvtDesktop*fading:                    0
 URxvt*fading:                           40
-URxvt*fadeColor:                        #002b36
+!URxvt*fadeColor:                        #002b36
 ! URxvt*utmpInhibit:                    boolean
 ! URxvt*urgentOnBell:                   boolean
 ! URxvt*visualBell:                     boolean

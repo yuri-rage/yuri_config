@@ -46,7 +46,7 @@ super + {o,i}
 super + y
 	bspc window -w last.manual
 
-# swap this window with the largest one in the layout
+# swap this window with the largest one in the layout
 super + m
 	bspc window -s biggest
 
@@ -166,3 +166,6 @@ super + a
 super + d
     notify-send -t 5000 "`date +'%H:%M   %a, %d %b %Y'`"
 
+# show output of periodically run update-checking script
+super + u
+    notify-send -t 5000 "`cat /var/local/updates-available-sh.info`"

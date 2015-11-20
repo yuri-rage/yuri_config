@@ -18,7 +18,8 @@ compton --config "$HOME/.config/compton.conf" -b
 
 # perhaps not the best place to start an automount daemon
 # but I'm not sure there's a better option for the moment
-udiskie --tray &
+# OBE - udevil + spacefm installed instead, Nov 2015
+# udiskie --tray &
 
 volumeicon &
 

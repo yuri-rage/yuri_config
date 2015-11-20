@@ -20,17 +20,14 @@
 		</item>
 	</menu>
 	<menu id="apps-multimedia-menu" label="Multimedia">
-		<item label="XBMC">
-			<action name="Execute">
-				<command>xbmc</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
 		<item label="VLC">
 			<action name="Execute">
 				<execute>vlc</execute>
+			</action>
+		</item>
+		<item label="Handbrake">
+			<action name="Execute">
+				<execute>ghb</execute>
 			</action>
 		</item>
 		<item label="xfburn">
@@ -38,9 +35,22 @@
 				<command>xfburn</command>
 			</action>
 		</item>
+		<item label="FileBot">
+			<action name="Execute">
+				<execute>filebot</execute>
+			</action>
+		</item>
 		<item label="openshot">
 			<action name="Execute">
 				<execute>openshot</execute>
+			</action>
+		</item>
+		<item label="Kodi">
+			<action name="Execute">
+				<command>xbmc</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
 			</action>
 		</item>
 	</menu>
@@ -142,6 +152,11 @@
 		</item>
 	</menu>
 	<menu id="root-menu" label="Openbox 3">
+		<item label="dmenu">
+			<action name="Execute">
+				<execute>dmenu_run</execute>
+			</action>
+		</item>
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>urxvt</execute>
@@ -152,9 +167,14 @@
 				<execute>google-chrome-stable</execute>
 			</action>
 		</item>
-		<item label="Thunar">
+		<item label="SpaceFM">
 			<action name="Execute">
-				<execute>thunar</execute>
+				<execute>spacefm</execute>
+			</action>
+		</item>
+		<item label="Libre Office">
+			<action name="Execute">
+				<execute>libreoffice</execute>
 			</action>
 		</item>
 		<item label="arduino">

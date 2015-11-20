@@ -933,8 +933,11 @@
       <focus>yes</focus>
       <desktop>all</desktop>
     </application>
-    <!-- yuri - remove all window decorations -->
+    <!-- yuri - remove all window decorations
     <application class="*">
+      <decor>no</decor>
+    </application> -->
+    <application class="*chrome*">
       <decor>no</decor>
     </application>
   </applications>
